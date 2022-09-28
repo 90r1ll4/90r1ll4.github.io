@@ -1,9 +1,9 @@
 # SITE CONFIGURATION
-baseurl: "/Type-on-Strap"
-url: "https://sylhare.github.io"
+baseurl: "/Rhombus"
+url: "https://90r1ll4.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Type on Strap                                    # site's title
+title: Cyber Rhombus                                  # site's title
 description: "A website with blog posts and pages"      # used by search engines
 avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
@@ -12,7 +12,8 @@ favicon: assets/favicon.ico                             # Icon displayed in the 
 header_text: Rhombus  # Change Blog header text
 header_feature_image: assets/img/header/triangular.jpeg
 header_feature_image_responsive: true
-footer_text: Stay Secure
+footer_text: > Stay Secure
+
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
 post_navigation: true
@@ -52,4 +53,4 @@ plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", ".jekyll-metadata", ".idea", "vendor/*", "assets/node_modules/*"]
 
 # theme: type-on-strap                                  # if using the theme as a jekyll theme gem
-remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
+remote_theme: 90r1ll4/Rhombus                     # If using as a remote_theme in github
