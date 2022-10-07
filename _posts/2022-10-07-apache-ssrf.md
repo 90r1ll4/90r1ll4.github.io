@@ -1,10 +1,12 @@
 ---
 layout: post
-title: Apache HTTP Server-Side Request Forgery (SSRF) (CVE-2021-40438)
+title: >
+    Apache HTTP Server-Side Request Forgery (SSRF) (CVE-2021-40438)
 tags: [CVE, Apache, SSRF]
 ---
 
 # Apache HTTP Server-Side Request Forgery (SSRF) (CVE-2021-40438)
+
 # Cause
 
 The flaw can be triggered only if mod_proxy is in use (e.g. ProxyPass, ReverseProxy is used in the httpd configuration files).
@@ -17,3 +19,4 @@ Anyone running Apache HTTP Server to 2.4.48 (or earlier) should [patch their ser
 https://github.com/Kashkovsky/CVE-2021-40438
 https://github.com/0day666/Vulnerability-verification
 https://github.com/vulhub/vulhub/tree/master/httpd/CVE-2021-40438
+
