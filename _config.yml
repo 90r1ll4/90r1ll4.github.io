@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/rhombus"
+baseurl: "/"
 url: "https://90r1ll4.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
@@ -53,4 +53,4 @@ plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", ".jekyll-metadata", ".idea", "vendor/*", "assets/node_modules/*"]
 
 # theme: type-on-strap                                  # if using the theme as a jekyll theme gem
-remote_theme: 90r1ll4/rhombus                     # If using as a remote_theme in github
+remote_theme: 90r1ll4/90r1ll4.github.io                     # If using as a remote_theme in github
