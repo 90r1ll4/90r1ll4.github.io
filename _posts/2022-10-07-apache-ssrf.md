@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: >
     Apache HTTP Server-Side Request Forgery (SSRF) (CVE-2021-40438)
@@ -20,3 +20,4 @@ https://github.com/Kashkovsky/CVE-2021-40438
 https://github.com/0day666/Vulnerability-verification
 https://github.com/vulhub/vulhub/tree/master/httpd/CVE-2021-40438
 
+ -->
